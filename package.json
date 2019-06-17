@@ -1,13 +1,29 @@
 {
-  "name": "@dccp/quant-calculator",
-  "version": "1.0.1",
+  "name": "@bccq/quant-calculator",
+  "version": "1.0.2",
   "description": "calculator for contract trading: close price, PNL ratio...",
   "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "JustinChow<zhou78620051@126.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinchou/bccq-price-calculator.git"
+  },
+  "keywords": [
+    "quant",
+    "calculator"
+  ],
+  "author": "JustinChow <zhou78620051@126.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinchou/bccq-price-calculator/issues"
+  },
+  "homepage": "https://github.com/justinchou/bccq-price-calculator#readme",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.3.0",
