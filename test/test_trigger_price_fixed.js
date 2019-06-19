@@ -14,12 +14,13 @@ const decimal = 0.001; // 精度
 const winRatio = 0.1; // 止损阈值
 const loseRatio = 0.05; // 止损阈值
 
-const mtp = new FixedTriggerPrice(longshort, leverage, fee, winRatio, loseRatio, slippage, decimal);
+const ftp = new FixedTriggerPrice(longshort, leverage, fee, winRatio, loseRatio, slippage, decimal);
 
-mtp.addCont(10, price);
+ftp.addCont(10, price);
 
 for (let id = 0; id < data.length; id++) {
-  mtp.onPriceChange(data[id].p);
-  // mtp.calcProfitRatio();
+  ftp.onPriceChange(data[id].p);
+  // ftp.calcProfitRatio();
+  // console.log(ftp);
 }
-mtp.calcProfitRatio();
+ftp.calcProfitRatio();
