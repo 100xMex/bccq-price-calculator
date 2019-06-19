@@ -24,7 +24,9 @@
     "url": "https://github.com/justinchou/bccq-price-calculator/issues"
   },
   "homepage": "https://github.com/justinchou/bccq-price-calculator#readme",
-  "dependencies": {},
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
   "devDependencies": {
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
