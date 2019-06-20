@@ -14,7 +14,8 @@ const decimal = 0.001; // 精度
 const winRatio = 0.1; // 止损阈值
 const loseRatio = 0.05; // 止损阈值
 
-const ftp = new FixedTriggerPrice(longshort, leverage, fee, winRatio, loseRatio, slippage, decimal);
+const ftp = new FixedTriggerPrice()
+  .init(longshort, leverage, fee, winRatio, loseRatio, slippage, decimal);
 
 ftp.addCont(10, price);
 
@@ -24,3 +25,17 @@ for (let id = 0; id < data.length; id++) {
   // console.log(ftp);
 }
 ftp.calcProfitRatio();
+
+// console.log(ftp);
+
+// const storeData = ftp.toJson();
+// const newFtp = new FixedTriggerPrice().fromJson(storeData);
+
+// console.log(newFtp);
+
+// for (let id = 0; id < data.length; id++) {
+//   ftp.onPriceChange(data[id].p);
+//   // ftp.calcProfitRatio();
+//   // console.log(ftp);
+// }
+// ftp.calcProfitRatio();

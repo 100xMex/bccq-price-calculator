@@ -13,7 +13,8 @@ const fee = 0.0003; // 手续费率 - 考虑杠杆和开平仓手续费, 上来�
 const decimal = 0.001; // 精度
 const closeRatio = 0.05; // 止损阈值
 
-const mtp = new MovingTriggerPrice(longshort, leverage, fee, closeRatio, slippage, decimal);
+const mtp = new MovingTriggerPrice()
+  .init(longshort, leverage, fee, closeRatio, slippage, decimal);
 
 mtp.addCont(10, price);
 
@@ -22,3 +23,16 @@ for (let id = 0; id < data.length; id++) {
   // mtp.calcProfitRatio();
 }
 mtp.calcProfitRatio();
+
+console.log(mtp);
+
+// const storeData = mtp.toJson();
+// const newMtp = new MovingTriggerPrice().fromJson(storeData);
+
+// console.log(newMtp);
+
+// for (let id = 0; id < data.length; id++) {
+//   newMtp.onPriceChange(data[id].p);
+//   // newMtp.calcProfitRatio();
+// }
+// newMtp.calcProfitRatio();
