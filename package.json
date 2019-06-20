@@ -1,6 +1,6 @@
 {
   "name": "@bccq/quant-calculator",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "calculator for contract trading: close price, PNL ratio...",
   "main": "index.js",
   "directories": {
